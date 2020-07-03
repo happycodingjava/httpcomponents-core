@@ -35,7 +35,7 @@ matrix:
 jobs:
   include:
     - jdk: openjdk7
-      script: mvn verify -B
+      script:
+	- mvn test -Dsurefire.runOrder=reversealphabetical
+	- mvn test -Dsurefire.runOrder=random
 
-after_success:
-  - mvn clean cobertura:cobertura coveralls:report
