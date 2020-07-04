@@ -35,7 +35,8 @@ matrix:
 jobs:
   include:
     - jdk: openjdk7
-      script:
-	- mvn test -Dsurefire.runOrder=reversealphabetical
-	- mvn test -Dsurefire.runOrder=random
+    - script:
+        - mvn test -Dsurefire.runOrder=reversealphabetical
+        - mvn test -Dsurefire.runOrder=random
+
 
