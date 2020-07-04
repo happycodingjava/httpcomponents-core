@@ -24,13 +24,6 @@ script: mvn verify -B -P docker
 
 jdk:
   - oraclejdk8
-  - openjdk11
-  - oraclejdk11
-  - openjdk-ea
-
-matrix:
-  allow_failures:
-    - jdk: openjdk-ea
 
 jobs:
   include:
